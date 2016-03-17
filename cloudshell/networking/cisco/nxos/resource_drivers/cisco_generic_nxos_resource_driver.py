@@ -2,7 +2,7 @@ __author__ = 'CoYe'
 
 import cloudshell.networking.cisco.nxos.resource_drivers
 from cloudshell.shell.core.driver_builder_wrapper import DriverFunction
-from cloudshell.networking.resource_driver.networking_generic_resource_dirver import networking_generic_resource_driver
+from cloudshell.networking.resource_driver.networking_generic_resource_driver import networking_generic_resource_driver
 
 class cisco_generic_nxos_resource_driver(networking_generic_resource_driver):
     @DriverFunction(extraMatrixRows={"resource": ["User", "Password", "Enable Password", "Console Server IP Address",
