@@ -18,20 +18,25 @@ if __name__ == '__main__':
 
     data_json = str("""{
             "resource" : {
-                    "ResourceAddress": "192.168.42.235",
-                    "User": "admin",
-                    "Password": "cisco",
+                    "ResourceAddress": "10.89.143.226",
+                    "User": "quali",
+                    "Password": "Password2",
                     "Console User": "",
                     "Console Password": "",
                     "Console Server IP Address": "",
+                    "CLI Connection Type": "",
                     "Enable Password": "cisco",
                     "Console Port": "",
-                    "Connection Type": "ssh",
-                    "SNMP Community": "Cisco",
-                    "SNMP Version": "3",
+                    "Connection Type": "auto",
+                    "SNMP Community": "stargate",
+                    "SNMP Version": "2",
                     "SNMP Password": "Password1",
                     "SNMP User": "QUALI",
-                    "SNMP Private Key": "Live4lol"
+                    "SNMP Private Key": "Live4lol",
+                    "SNMP V3 User": "",
+                    "SNMP V3 Password": "",
+                    "SNMP V3 Private Key": "",
+                    "SNMP Read Community": "stargate"
                 }
             }""")
     resource_driver = cisco_generic_nxos_resource_driver('77', data_json)
