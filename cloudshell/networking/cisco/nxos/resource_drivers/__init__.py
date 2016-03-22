@@ -7,5 +7,5 @@ from pkgutil import extend_path
 __path__ = extend_path(__path__, __name__)
 
 HandlerFactory.handler_classes['NXOS'] = CiscoNXOSHandler
-HandlerFactory.handler_classes['NXOS_7K'] = CiscoNXOSHandler
+HandlerFactory.handler_classes['NXOS_5K'] = CiscoNXOSHandler
 HardwarePlatformDetector.RESOURCE_DRIVERS_MAP = CISCO_RESOURCE_DRIVERS_MAP
