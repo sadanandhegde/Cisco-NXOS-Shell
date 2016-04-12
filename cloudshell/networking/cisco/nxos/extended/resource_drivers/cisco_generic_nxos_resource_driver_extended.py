@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     resource_driver = cisco_generic_nxos_resource_driver_extended('77', data_json)
     # print resource_driver.GetInventory(data_json)
-    # print resource_driver.Add_VLAN(data_json, '10.89.143.226/1/1/7|10.89.143.226/1/1/8', '45', 'trunk', '')
+    print resource_driver.Add_VLAN(data_json, '10.89.143.226/1/1/7|10.89.143.226/1/1/8', '45', 'trunk', '')
     # print resource_driver.Remove_VLAN(data_json, '10.89.143.226/1/1/7|10.89.143.226/1/1/8', '45', 'trunk', '')
     # print resource_driver.Remove_VLAN(data_json, '10.89.143.226/PC3', '45', 'trunk', '')
     # print resource_driver.Add_VLAN(data_json, '10.89.143.226/PC22', '45', 'trunk', '')
