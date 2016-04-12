@@ -11,7 +11,7 @@ with open('test_requirements.txt') as f_tests:
     required_for_tests = f_tests.read().splitlines()
 
 setup(
-    name='cloudshell-networking-cisco-nxos',
+    name='cloudshell-networking-cisco-nxos-extended',
     url='http://www.qualisystems.com/',
     author='QualiSystems',
     author_email='info@qualisystems.com',
