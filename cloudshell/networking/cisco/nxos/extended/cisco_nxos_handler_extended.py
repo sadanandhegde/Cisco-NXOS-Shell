@@ -346,7 +346,7 @@ class CiscoNXOSHandlerExtended(CiscoHandlerBase):
         vlan_id = [line for line in self._send_command('show running-config interface port-channel ' + port_channel_id + ' | include vlan').splitlines() if re.search('switchport.*vlan.*\d+', line)]
         if vlan_id:
             self.send_commands_list(['interface port-channel ' + port_channel_id, 'no ' + vlan_id[0]])
-        self.send_commands_list(['interface port-channel ' + port_channel_id, 'no switchport'])
+        self.send_commands_list(['interface port-channel ' + port_channel_id, 'no switchport', 'shutdown'])
         self.send_commands_list(['no interface port-channel ' + port_channel_id])
         self._logger.info('{0} was removed'.format(port_channel_id))
 
@@ -423,6 +423,7 @@ class CiscoNXOSHandlerExtended(CiscoHandlerBase):
 
             command_list = list()
 
+            command_list.append('interface ' + port_name)
             try:
                 speed = re.search('speed=(.*?);', port_descr.group(0)).group(1)
             except:
